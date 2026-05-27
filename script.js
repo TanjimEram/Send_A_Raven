@@ -1,6 +1,4 @@
-//https://nbnyazggemnbxpxpjgqc.supabase.co 
 
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ibnlhemdnZW1uYnhweHBqZ3FjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4NTk3MDEsImV4cCI6MjA5NTQzNTcwMX0.TjdPr0ePgIigkKq7lgaPJnzZQl_JKGy1ub-U3_zU9JY
 // SECURITY ENGINE: Verify tokens in local phone memory before rendering the vault
 document.addEventListener("DOMContentLoaded", () => {
     const castleGate = document.getElementById('castle-gate');

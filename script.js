@@ -1,5 +1,41 @@
 //https://nbnyazggemnbxpxpjgqc.supabase.co 
+
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ibnlhemdnZW1uYnhweHBqZ3FjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4NTk3MDEsImV4cCI6MjA5NTQzNTcwMX0.TjdPr0ePgIigkKq7lgaPJnzZQl_JKGy1ub-U3_zU9JY
+// SECURITY ENGINE: Verify tokens in local phone memory before rendering the vault
+document.addEventListener("DOMContentLoaded", () => {
+    const castleGate = document.getElementById('castle-gate');
+    const gatePassphrase = document.getElementById('gate-passphrase');
+    const gateSubmitBtn = document.getElementById('gate-submit-btn');
+    const gateError = document.getElementById('gate-error');
+
+    // If this phone has successfully logged in before, vanish the gate immediately
+    if (localStorage.getItem("citadel_unlocked") === "true") {
+        if (castleGate) castleGate.remove();
+        return;
+    }
+
+    // Handle authentication validation actions
+    gateSubmitBtn.addEventListener('click', () => {
+        const secretInput = gatePassphrase.value.trim().toLowerCase();
+        
+        // Setting your private password key phrase here!
+        if (secretInput === "Kim Chi") { 
+            localStorage.setItem("citadel_unlocked", "true");
+            castleGate.classList.add('hidden');
+            setTimeout(() => castleGate.remove(), 500); // Cleans up the page structure
+        } else {
+            gateError.classList.remove('hidden');
+            gatePassphrase.value = "";
+            gatePassphrase.focus();
+        }
+    });
+
+    // Let them press 'Enter' on their phone keyboard to submit
+    gatePassphrase.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') gateSubmitBtn.click();
+    });
+});
+
 const SUPABASE_URL = "https://nbnyazggemnbxpxpjgqc.supabase.co ";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ibnlhemdnZW1uYnhweHBqZ3FjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4NTk3MDEsImV4cCI6MjA5NTQzNTcwMX0.TjdPr0ePgIigkKq7lgaPJnzZQl_JKGy1ub-U3_zU9JY";
 

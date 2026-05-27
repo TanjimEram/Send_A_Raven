@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raven Messenger Network</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Pinyon+Script&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="castle-walls"></div>
+
+    <div class="user-toggle">
+        <button id="set-lord" class="toggle-btn active">I am the Lord</button>
+        <button id="set-lady" class="toggle-btn">I am the Lady</button>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1 class="got-title">Citadel Scrolls</h1>
+            <span id="identity-banner">Logged as: Lord</span>
+        </div>
+
+        <div id="chat-stream" class="scrollable-vault">
+            <div class="system-message">No scrolls unfurled yet. Loading history...</div>
+        </div>
+
+        <div class="writing-desk-footer">
+            <div class="emoji-bar">
+                <button class="emoji-quick-btn">🐦‍⬛</button>
+                <button class="emoji-quick-btn">❤️</button>
+                <button class="emoji-quick-btn">👑</button>
+                <button class="emoji-quick-btn">⚔️</button>
+                <button class="emoji-quick-btn">✨</button>
+            </div>
+            
+            <div class="input-row">
+                <button id="attach-btn" class="attach-icon-btn">📎</button>
+                <input type="file" id="file-loader" class="hidden" accept="image/*">
+                
+                <textarea id="message-input" placeholder="Compose a scroll..."></textarea>
+                <button id="send-scroll-btn" class="send-icon-btn">🦅</button>
+            </div>
+            <div id="image-preview-bar" class="hidden">
+                <span id="preview-name">image.png</span>
+                <button id="cancel-image-btn">✕</button>
+            </div>
+        </div>
+
+        <div id="animation-container" class="hidden">
+            <div id="envelope" class="envelope-box">✉️</div>
+            <div id="css-raven" class="raven-avatar hidden">🦅</div>
+            <p id="status-text" class="got-subtitle">Dispatching Raven...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>

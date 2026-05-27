@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const secretInput = gatePassphrase.value.trim().toLowerCase();
         
         // Setting your private password key phrase here!
-        if (secretInput === "Kim Chi") { 
+        if (secretInput === "kimchi") { 
             localStorage.setItem("citadel_unlocked", "true");
             castleGate.classList.add('hidden');
             setTimeout(() => castleGate.remove(), 500); // Cleans up the page structure

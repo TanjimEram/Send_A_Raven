@@ -8,7 +8,7 @@ Live Demo: `https://<your-username>.github.io/raven-messenger/`
 
 ## 🏰 The Core Philosophy
 
-This project was conceived as an antidote to the loud, over-connected, and algorithmic nature of modern public social media networks. It was built specifically for my girlfriend, who appreciates intentional communication and feels out of place on mainstream platforms.
+This project was conceived as an antidote to the loud, over-connected, and algorithmic nature of modern public social media networks. It was built specifically for a friend, who appreciates intentional communication and feels out of place on mainstream platforms.
 
 Instead of instant, superficial texts, **Citadel Scrolls** re-imagines digital messaging as an old-school exchange of parchment scrolls. 
 * Messages from the **Lord** appear as elegant, flowing cursive parchment.
